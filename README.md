@@ -40,3 +40,17 @@ ls -l
 create database wordpress; <br>
 CREATE USER 'wpadmin' IDENTIFIED BY 'wpadminpassword'; <br>
 GRANT ALL PRIVILEGES ON wordpress.* to "wpadmin"; <br>
+
+
+# The uploaded file exceeds the upload_max_filesize directive in php.ini.
+sudo nano /etc/php/8.1/apache2/php.ini <br>
+upload_max_filesize = 100M <br>
+post_max_size = 100M <br>
+sudo systemctl restart apache2 <br>
+
+
+
+
+
+
+
